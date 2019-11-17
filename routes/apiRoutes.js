@@ -16,10 +16,9 @@ module.exports = function(app) {
 
   // Get order by id
   app.get("/api/workorder/:id", function(req, res) {
-    console.log("ID: "+req.params.id, db.Workorder.id);
-    db.Workorder.findAll(req.body, {
+    db.Workorder.findAll({
       where: {
-        clientName: req.params.id
+        id: req.params.id
       }
     }).then(function(order) {
       res.json(order);
@@ -28,14 +27,16 @@ module.exports = function(app) {
 
   // Update workorder
   app.put("/api/workorder/:id", function(req, res) {
-    console.log("ID: "+req.params.id);
-    db.Workorder.update(req.body, {
+    console.log(req.body);
+    db.Workorder.update(req.body,{
       where: {
-        id: req.params.id
+        id: req.body.id
       }
-    }).then(function(rowsUpdated) {
-      res.redirect("/dashboard");
+    }).then(function(update) {
+      req.method = 'GET';
+      res.redirect('/dashboard');
     });
+
   });
 
   // Delete a workorder by id
@@ -59,14 +60,14 @@ module.exports = function(app) {
 
   // Create a new material in warehouse
   app.post("/api/warehouse", function(req, res) {
-    db.Warehouse.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
+    db.Warehouse.create(req.body).then((order) => {
+      // res.json(order);
+      res.redirect("/warehouse")});
   });
 
   // Update material in warehouse
   app.put("/api/warehouse/:id", function(req, res) {
-    db.Warehouse.update(req.body, {
+    db.Warehouse.update({
       where: {
         id: req.params.id
       }
