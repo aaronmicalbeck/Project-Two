@@ -1,31 +1,32 @@
 <div class="wrapper-editor">
 
   <div class="container-fluid">
-	<div class="page-header">
-		<h1 class="m-4">HamJARs</h1>
-	</div>
-	<!--            navbar-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand ml-2" href="#">{{userName}}</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="/dashboard">Home <span class="sr-only"></span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/logout">Sign out</a>
-				</li>
-        <li class="nav-item">
-					<a class="nav-link" href="/dashboard">Dashboard</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<hr/>
-</div>
+    <div class="page-header">
+      <h1 class="m-4">HamJARs</h1>
+    </div>
+    <!--            navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand ml-2" href="#">{{userName}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/dashboard">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Sign out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+  </div>
 
   <div class="row d-flex justify-content-center modalWrapper">
     <div class="modal fade addNewInputs" id="modalAdd1" tabindex="-1" role="dialog" aria-labelledby="modalAdd"
@@ -43,44 +44,43 @@
 
 
           <div class="modal-body">
-							<form method="post" action="/api/warehouse" id="form">
-								<div class="form-group">
-									<input class="form-control" name="materialName" id="materialName"
-										aria-describedby="materialName" placeholder="Material Name">
-									<label for="materialName" class="font-weight-bold"></label>
-								</div>
-								<div class="form-group">
-									<input class="form-control" name="materialSize" id="materialSize"
-										aria-describedby="clientAddress" placeholder="Material Size">
-									<label for="materialSize" class="font-weight-bold"></label>
-								</div>
-								<div class="form-group">
-									<input class="form-control" name="materialQuantity" id="materialQuantity"
-										placeholder="Material Quantity">
-									<label for="materialQuantity" class="font-weight-bold"></label>
-								</div>
-								<div class="form-group">
-									<input class="form-control" name="materialPrice" id="materialPrice"
-										placeholder="Material Price">
-									<label for="materialPrice" class="font-weight-bold"></label>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<input type="submit" class="btn btn-primary" id="submit" value="Submit">
-								</div>
-							</form>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
+            <form method="post" action="/api/warehouse" id="form">
+              <div class="form-group">
+                <input class="form-control" name="materialName" id="materialName" aria-describedby="materialName"
+                  placeholder="Material Name">
+                <label for="materialName" class="font-weight-bold"></label>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="materialSize" id="materialSize" aria-describedby="clientAddress"
+                  placeholder="Material Size">
+                <label for="materialSize" class="font-weight-bold"></label>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="materialQuantity" id="materialQuantity"
+                  placeholder="Material Quantity">
+                <label for="materialQuantity" class="font-weight-bold"></label>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="materialPrice" id="materialPrice" placeholder="Material Price">
+                <label for="materialPrice" class="font-weight-bold"></label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" id="submit" value="Submit">
+              </div>
+            </form>
+          </div>
 
         </div>
       </div>
-      </div>
     </div>
+
+
   </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="text-center">
@@ -130,8 +130,8 @@
 </div>
 
 <div class="text-center buttonEditWrapper">
-  <button class="btn btn-info btn-rounded btn-sm buttonEdit" data-toggle="modal" data-target="#modalEdit1"
-    disabled>Edit<i class="fas fa-pencil-square-o ml-1"></i></a>
+  <button class="btn btn-info btn-rounded btn-sm buttonEdit" data-toggle="modal" data-target="#modalEdit1">Edit<i
+      class="fas fa-pencil-square-o ml-1"></i></a>
 </div>
 
 <div class="modal fade" id="modalDelete1" tabindex="-1" role="dialog" aria-labelledby="modalDelete1" aria-hidden="true">
@@ -156,15 +156,25 @@
 </div>
 
 <div class="text-center">
-  <button class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal" disabled data-target="#modalDelete"
-    disabled>Delete<i class="fas fa-times ml-1"></i></a>
+  <button class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal" data-target="#modalDelete">Delete<i
+      class="fas fa-times ml-1"></i></a>
 </div>
 </div>
 
 <table id="dt-more-columns 6" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
-      <th class="th-sm">Material Name
+
+
+
+      <th class="th-sm">Material Name <div class="text-center">
+          <button class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal"
+            data-target="#modalDelete">Delete<i class="fas fa-times ml-1"></i></a>
+            <div class="text-center buttonEditWrapper">
+              <button class="btn btn-info btn-rounded btn-sm buttonEdit" data-toggle="modal"
+                data-target="#modalEdit1">Edit<i class="fas fa-pencil-square-o ml-1"></i></a>
+            </div>
+        </div>
 
       </th>
       <th class="th-sm">Material Size
@@ -176,7 +186,7 @@
       <th class="th-sm">Material Price
 
       </th>
-      
+
 
     </tr>
   </thead>
@@ -197,7 +207,7 @@
       <td>3/8 in. x 2 1/4 in. Dark</td>
       <td>1500 sq. ft.</td>
       <td>3.00/sq. ft.</td>
-      
+
     </tr>
   </tbody>
   <tfoot>
@@ -217,5 +227,3 @@
 <!-- MDB core JavaScript -->
 
 </script>
-
-
