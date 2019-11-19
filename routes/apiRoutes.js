@@ -58,7 +58,7 @@ module.exports = function(app) {
 
   // Create a new material in warehouse
   app.post("/api/warehouse", function(req, res) {
-    db.Warehouse.create(req.body).then((order) => {
+    db.Warehouse.create(req.body).then((material) => {
       // res.json(order);
       res.redirect("/warehouse")});
   });
