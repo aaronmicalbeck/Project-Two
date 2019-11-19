@@ -1,3 +1,4 @@
+use exampledb;
 insert into warehouses (materialName, materialSize, materialQuantity, materialPrice, createdAt, updatedAt) values ('Home', '196 Ft', '947 ', '054.49', '2019-06-23 20:14:25', '2019-02-06 07:46:09');
 insert into warehouses (materialName, materialSize, materialQuantity, materialPrice, createdAt, updatedAt) values ('Home', '068 Ft', '895 ', '435.84', '2019-11-08 15:29:23', '2019-06-26 04:02:16');
 insert into warehouses (materialName, materialSize, materialQuantity, materialPrice, createdAt, updatedAt) values ('Outdoors', '855 Ft', '998 ', '584.58', '2019-03-17 23:33:56', '2019-06-30 18:06:05');
